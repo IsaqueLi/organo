@@ -2,7 +2,7 @@ import React from 'react'
 import { useState } from 'react'
 import CampoTexto from '../CampoTexto'
 import './Formulario.css'
-import ListaSuspensa from '../../ListaSuspensa'
+import ListaSuspensa from '../ListaSuspensa'
 import Botao from '../Botao'
 
 
