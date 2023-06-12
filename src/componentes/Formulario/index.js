@@ -6,7 +6,7 @@ import ListaSuspensa from '../ListaSuspensa'
 import Botao from '../Botao'
 
 
-const Formulario = () => {
+const Formulario = (props) => {
 
     const times = [
         'Programação',
@@ -22,10 +22,16 @@ const Formulario = () => {
     const [cargo, setCargo] = useState('')
     const [imagem, setImagem] = useState('')
     const [time, setTime] = useState('')
-    
+
+        
     const aoSalvar = (evento) => {
         evento.preventDefault()
-        console.log('Form foi submetido =>', nome, cargo, imagem, time)
+        props.aoColaboradorCadastrado({
+            nome,
+            cargo,
+            imagem,
+            time
+        })
     }
 
     return (
